@@ -1,10 +1,8 @@
 <script context="module">
-	const api = '';
+	const api = 'ea3bd0fc63f0505b9b631c1de569bc4f';
 	export async function load({ fetch }) {
 		const res = await fetch(
-			` https://api.themoviedb.org/3/movie/popular?api_key=${
-				import.meta.env.VITE_KEY
-			}&language=en-US&page=1`
+			` https://api.themoviedb.org/3/movie/popular?api_key=${api}&language=en-US&page=1`
 		);
 		const data = await res.json();
 		// console.log(data);
